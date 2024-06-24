@@ -53,3 +53,4 @@ docker compose ps
 ```
 docker compose down
 ```
+![image](https://github.com/jonathanpoaquiza75/2024A-ISWD633-Practica5/assets/109117858/aa9c4ddf-8332-4f32-bac9-19993ff1f949)
