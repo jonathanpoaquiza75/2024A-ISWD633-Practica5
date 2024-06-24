@@ -1,9 +1,7 @@
-version: '3.8'
-
 services:
   sonarqube:
     image: sonarqube:latest
-    container_name: sonarqube
+    container_name: srv-sonarqube
     ports:
       - "9000:9000"
     environment:
@@ -15,7 +13,7 @@ services:
       - sonarqube_extensions:/opt/sonarqube/extensions
       - sonarqube_logs:/opt/sonarqube/logs
     networks:
-      - sonar_network
+      - net-sonar
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:9000 || exit 1"]
       interval: 30s
@@ -25,7 +23,7 @@ services:
 
   postgres:
     image: postgres:latest
-    container_name: postgres
+    container_name: srv-postgres
     environment:
       - POSTGRES_USER=sonar
       - POSTGRES_PASSWORD=sonar
@@ -33,7 +31,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
-      - sonar_network
+      - net-sonar
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U sonar -d sonarqube"]
       interval: 30s
@@ -48,5 +46,5 @@ volumes:
   postgres_data:
 
 networks:
-  sonar_network:
+  net-sonar:
     driver: bridge
