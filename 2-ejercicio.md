@@ -15,4 +15,4 @@ Configurar SonarQube utilizando Docker Compose, para esto necesitas dos servicio
 # ACCEDER A LOCALHOST:puertoDefinido para ingresar a SonarQube
 Por el puerto 9000, que es uno de los puertos específicos para SonarQube
 ![image](https://github.com/jonathanpoaquiza75/2024A-ISWD633-Practica5/assets/109117858/cf0fad33-9432-410d-a301-20bfb2e0dbcd)
-
+![image](https://github.com/jonathanpoaquiza75/2024A-ISWD633-Practica5/assets/109117858/ac994bc4-32ac-44ce-8e46-cffd353743fc)
